@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+    <h1>welcome student</h1>
+
+        <h2 th:text="${'My name is '+name}"></h2>
+        <h1 th:text="${'I learn ' + course}"></h1>
+        <h1 th:text="${id}"></h1>
+        <h1 th:text="${nums}"> </h1>
+        <h1 th:text="${nums.get(0)}"> </h1>
+        <h1 th:text="${birthday}"></h1>
+        <h1 th:text="${student.getFirstName()}"></h1>
+        <a th:href="@{https://www.google.com/}">google</a>
+        <a th:href="@{/student/register}">register</a>
+
+<!--adding parameter to link-->
+        <a th:href="@{/student/welcome(id=${student.id})}">Link to student </a>
+
+</body>
+</html>
