@@ -20,6 +20,13 @@
 
 <!--adding parameter to link-->
         <a th:href="@{/student/welcome(id=${student.id})}">Link to student </a>
+<!-- iteration-->
+        <ul>
+            <li th:each="number: ${nums}" th:text="${number}"></li>
+        </ul>
+<!--    fragments-->
+    <div th:replace="fragments/footer :: part"></div>
+
 
 </body>
 </html>

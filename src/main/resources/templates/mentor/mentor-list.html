@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>age</th>
+            <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="mentor: ${mentors}">
+                <td th:text="${mentor.getFirstName()}"></td>
+                <td th:text="${mentor.lastName}">True</td>
+                <td th:text="${mentor.age}">32</td>
+                <td th:text="${mentor.gender}">female</td>
+
+            </tr>
+        </tbody>
+    </table>
+<div th:replace="fragments/footer :: part"></div>
+</body>
+</html>
